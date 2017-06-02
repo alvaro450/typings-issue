@@ -1,13 +1,26 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../out-tsc/app",
+    "outDir": "../build",
+     "declaration": true,
     "module": "es2015",
+    "target": "es2015",
     "baseUrl": "",
-    "types": []
+    "types": [],
+    "skipLibCheck": true
   },
   "exclude": [
     "test.ts",
     "**/*.spec.ts"
-  ]
+  ],
+   "files": [
+        "./main.ts"
+    ],
+   "angularCompilerOptions": {
+        "annotateForClosureCompiler": true,
+        "strictMetadataEmit": true,
+        "skipTemplateCodegen": true,
+        "flatModuleOutFile": "typings-issue.js",
+        "flatModuleId": "typings-issue"
+    }
 }
